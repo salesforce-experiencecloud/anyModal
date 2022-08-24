@@ -1,18 +1,8 @@
-# Salesforce DX Project: Next Steps
+# AnyModal for Experience Cloud (LWR)
+![Personalize Anything Image ](https://user-images.githubusercontent.com/8514282/182430875-df718544-1f65-4026-855b-d07c5ebb16b0.png)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Description:
 
-## How Do You Plan to Deploy Your Changes?
+LWR-only Experience Builder component that lets you build the modal experience of your choice! Design your trigger region for elements that will open (or close) the modal, configure how your modal is triggered via UI or automatically based on events like scrolling percentage, or number of seconds after the component renders, or number of clicks and more. Additionally, design the modal’s content with header, footer, and body regions and drag/ drop any component from your components panel any way you want! You can place images, forms, videos, and even flows in your modal!  
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+[Click here for More Info / Documentation](https://salesforce.quip.com/wjuwADtDbl69)
