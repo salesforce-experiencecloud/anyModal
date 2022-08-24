@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2020, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+ 
+.slds-modal__content {
+    padding: var(--anyModal-content-spacing);
+    border-top-left-radius: var(--anyModal-content-top-radius-border);
+    border-top-right-radius: var(--anyModal-content-top-radius-border);
+    border-bottom-left-radius: var(--anyModal-content-bottom-radius-border);
+    border-bottom-right-radius: var(--anyModal-content-bottom-radius-border);
+}

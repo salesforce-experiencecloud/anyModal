@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>AnyModal (LWR)</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property label="Edit Mode" name="editMode" type="Boolean" default="true"
+            description="When checked, this checkbox allows the builder to configure components within the modal regions. It will not have any impact on the published site" />
+            <property label="Display Regions" name="displayRegions" type="String" datasource="All,Body-Only,Header and Body,Body and Footer" default="All"
+            description="Sets the regions available in the modal" />
+            <property label="Modal Size" name="size" type="String" datasource="small,medium,large" default="medium"
+            description="Sets the width percentage of the modal (small: 60%, medium: 70%, large: 90%)" />
+            <property label="Element Text or Classname to Match on Click to Open Modal" name="referenceOpen" type="String" translatable="true" 
+            description="If set, any element clicked on in the trigger region must have text or a class name that matches this field to open the modal" />
+            <property label="Element Text or Classname to Match on click to Close Modal" name="referenceClose" type="String" translatable="true"
+            description="If set, any element clicked on in the modal regions must have text or a class name that matches this field to close the modal" />
+            <property label="Action After Close" name="actionAfterClose" type="String" datasource="None,Reload Page,Navigate to URL" default="None"
+            description="Select optional behavior when the modal is closed" />
+            <property label="Navigate to URL" name="actionAfterCloseParam" type="String"
+            description="Set the URL to navigate to when the Action After Close is set to Navigate to URL" />
+            <property label="Cookie Name" name="cookieName" type="String"
+            description="When set, this field will set a browser cookie when the modal is opened. The modal will not be automatically triggered while the cookie persists. Example: anyModal-cookieName" />
+            <property label="Cookie Expiration (Hours)" name="cookieExpiration" type="Integer" default="24"
+            description="How long the cookie will remain on the user's browser" />
+            <property label="Trigger Type" name="triggerType" type="String" datasource="None,After x Seconds,Page Scroll x Percent,After x Clicks,Exit Intent After x Seconds" default="None"
+            description="When a Cookie Name is Set, choose an optional automatic modal trigger" />
+            <property label="Trigger Threshold (x)" name="triggerThreshold" type="Integer" default="5"
+            description="Represents the Number of Seconds, Clicks or a Percentage depending on the selected Trigger Type" />
+            <property label="Reference Key For Custom Events" name="referenceKey" type="String"
+            description="This optional key can be supplied to target the modal when using CustomEvents" />
+            <property label="Border Radius" name="borderRadius" type="String"
+            description="Rounds the corners of the modal, set to 0 for no radius" />
+            <property label="Section Separator Size" name="sectionSeparatorSize" type="String"
+            description="How thick the separator between the header, content and footer should be" />
+            <property label="Header Spacing" name="headerSpacing" type="String"
+            description="How much padding the header should have, set to 0 for no padding" />
+            <property label="Content Spacing" name="contentSpacing" type="String"
+            description="How much padding the content should have, set to 0 for no padding" />
+            <property label="Footer Spacing" name="footerSpacing" type="String"
+            description="How much padding the footer should have, set to 0 for no padding" />
+            <property label="Trigger Region Classes" name="triggerRegionClassNames" type="String" 
+            description="Class names to uniquely target the trigger region's styles." />
+            <property label="Modal Region Classes" name="modalRegionClassNames" type="String" 
+            description="Class names to uniquely target the modal region's styles." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

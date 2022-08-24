@@ -1,0 +1,43 @@
+<template>
+    <template if:true={isEditPreview}>
+        <p class="slds-notify slds-notify_alert">Add a Button component to the triggerRegion to open on click and to the modal to close on click</p>
+    </template>
+    <div onclick={handleTriggerRegion} class={triggerRegionClassNames} style={triggerStyle}>
+        <slot name="triggerRegion"></slot>
+    </div>
+    <template if:true={isEditPreview}>
+        <p class="slds-notify slds-notify_alert">Build out the modal regions with any components needed</p>
+    </template>
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" class={modalClass} aria-modal="true" style={modalStyle}>
+            <div class="slds-modal__container" style={containerStyle} onclick={handleModalRegion}>
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={handleClose}>
+                    <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xlink:href={iconUrl}></use>
+                    </svg>
+                    <span class="slds-assistive-text">Cancel and close</span>
+                </button>
+                <template if:true={displayHeader}>
+                    <div class="slds-modal__header">
+                        <slot name="headerRegion"></slot>
+                    </div>
+                </template>
+                <div class="slds-modal__content">
+                    <slot name="contentRegion"></slot>
+                </div>
+                <template if:true={displayFooter}>
+                    <div class="slds-modal__footer">
+                        <slot name="footerRegion"></slot>
+                    </div>
+                </template>
+            </div>
+        </section>
+    </template>
+    <template if:true={displayBackdrop}>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+      <template if:true={isAura}>
+        <p class="slds-notify slds-notify_alert slds-alert_error">This component is not compatible with Aura runtime.</p>
+    </template>
+</template>
