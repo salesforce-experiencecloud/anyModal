@@ -93,7 +93,7 @@ export default class AnyModal extends LightningElement {
             document.addEventListener('keydown', this.keydownListener);
 
             if (this.cookieName) {
-                let cookieValue = this.getCookie(this.cookieNameWithPrefix);
+                let cookieValue = this.getCookie(this.cookieName);
                 if (cookieValue != null) {
                     return;
                 }
@@ -153,7 +153,7 @@ export default class AnyModal extends LightningElement {
             if (payload.referenceKey === context.referenceKey) {
                 //useCookie should only optionally be supplied with the open event and not used with the close event
                 if (payload.hasOwnProperty('useCookie') && payload.useCookie) {
-                    let cookieValue = context.getCookie(context.cookieNameWithPrefix);
+                    let cookieValue = context.getCookie(context.cookieName);
                     if (cookieValue == null) {
                         return true;
                     }
@@ -222,7 +222,7 @@ export default class AnyModal extends LightningElement {
         context.showModal = true;
         context.modalWasDisplayed = true;
         if (context.cookieName) {
-            document.cookie = context.cookieNameWithPrefix + '=true;path=/;max-age=' + context.cookieExpiration * 3600;
+            document.cookie = context.cookieName + '=true;path=/;max-age=' + context.cookieExpiration * 3600;
         }
     }
 
@@ -290,10 +290,6 @@ export default class AnyModal extends LightningElement {
 
     get iconUrl() {
         return basePath +'/assets/icons/utility-sprite/svg/symbols.svg#close';
-    }
-
-    get cookieNameWithPrefix() {
-        return 'anyModal-' + this.cookieName;
     }
 
     isInSitePreview() {
