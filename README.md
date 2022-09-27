@@ -1,5 +1,5 @@
 # AnyModal for Experience Cloud (LWR)
-![Personalize Anything Image ](https://user-images.githubusercontent.com/8514282/182430875-df718544-1f65-4026-855b-d07c5ebb16b0.png)
+![AnyModal Image ](https://user-images.githubusercontent.com/8514282/192587777-165f77e9-5754-4f44-ae3c-01183238abf5.png)
 
 ## Description:
 
