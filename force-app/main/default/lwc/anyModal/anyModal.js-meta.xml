@@ -3,6 +3,12 @@
     <apiVersion>55.0</apiVersion>
     <isExposed>true</isExposed>
     <masterLabel>AnyModal (LWR)</masterLabel>
+    <description>
+        LWR-only Experience Builder component that lets you build the modal experience of your choice!
+    </description>
+    <capabilities>
+        <capability>lightningCommunity__RelaxedCSP</capability>
+    </capabilities>
     <targets>
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
