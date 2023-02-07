@@ -193,7 +193,7 @@ export default class AnyModal extends LightningElement {
     isValidRegionClick(referenceText, evt) {
         let target = evt.target;
 
-        if (target.tagName === 'DXP_FLOWRUNTIME-NAVIGATION-BAR') {
+        if (target.tagName === 'DXP_FLOWRUNTIME-NAVIGATION-BAR' || target.tagName === 'FLOWRUNTIME-NAVIGATION-BAR') {
             let button = evt.composedPath()[2];
             if (button.className.indexOf('flow-button__FINISH') > 0) {
                 return true;
@@ -206,6 +206,24 @@ export default class AnyModal extends LightningElement {
             } else if (target.className.indexOf(referenceText) > 0) {
                 return true;
             }
+
+            if(typeof evt.composedPath === 'function' && evt.composedPath().length > 0)
+            {
+                for (let element of evt.composedPath())
+                {
+                    if(element.innerText !== undefined && referenceText === element.innerText)
+                    {
+                        return true;
+                    } else if(element.text !== undefined && referenceText === element.text)
+                    {
+                        return true;
+                    } else if(element.className !== undefined && element.className.indexOf(referenceText) > 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+
         } else if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.tagName === 'LIGHTNING-BUTTON') {
             return true;
         }
